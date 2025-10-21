@@ -6,14 +6,16 @@ plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
     alias(libs.plugins.kotlin.plugin.serialization)
+    application
 }
 
 group = "com.example.com"
 version = "0.0.1"
 
-application {
-    mainClass = "io.ktor.server.netty.EngineMain"
-}
+    application {
+        mainClass.set("com.example.com.ApplicationKt")
+    }
+
 
 dependencies {
     implementation(libs.ktor.server.content.negotiation)

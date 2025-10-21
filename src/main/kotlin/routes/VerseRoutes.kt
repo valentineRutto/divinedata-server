@@ -11,7 +11,7 @@ import io.ktor.server.routing.get
         val esvService = EsvService(System.getenv("ESV_API_KEY") ?: "YOUR_ESV_API_KEY")
 
         get("/verse") {
-            val passage = call.request.queryParameters["q"] ?: "John 3:16"
+            val passage = call.request.queryParameters["q"] ?: "John+11:35"
             val text = esvService.getVerse(passage)
             call.respond(mapOf("reference" to passage, "text" to text))
         }

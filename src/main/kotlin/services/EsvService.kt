@@ -29,7 +29,9 @@ class EsvService(private val apiKey: String) {
         }
 
         val body = Json.parseToJsonElement(response.bodyAsText()).jsonObject
+
         val passages = body["passages"]?.jsonArray
+
         return passages?.get(0)?.jsonPrimitive?.content ?: "Verse not found."
 
     }
