@@ -1,5 +1,6 @@
 package com.example.com.services
 
+import com.example.com.services.Utils.client
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -17,9 +18,6 @@ import kotlinx.serialization.json.jsonPrimitive
 class EsvService(private val apiKey: String) {
 
 
-    val client = HttpClient(CIO) {
-        install(ContentNegotiation) { json() }
-    }
 
     suspend fun getVerse(passage: String): String {
 
@@ -33,8 +31,9 @@ class EsvService(private val apiKey: String) {
         val passages = body["passages"]?.jsonArray
 
         return passages?.get(0)?.jsonPrimitive?.content ?: "Verse not found."
-
     }
+
+
 
 
 }
