@@ -1,7 +1,50 @@
-# divinedata-server combines ESV API and AI-Intergration  
+# DivineData Server ⚙️
 
-This server serve the divinedata gpt and follow the below architecture:
+**Ktor Backend for the DivineData Emotional Bible Companion**  
+Empowering the DivineData app with scripture, emotion analysis, and AI-powered reflections.
 
+---
+
+### ✨ Overview
+DivineData Server is a **Ktor-based backend** that integrates:
+- The **ESV Bible API** for retrieving accurate scripture passages.  
+- A **Lightweight LLM (Large Language Model)** for generating emotional insights and reflections.  
+- A unified **RESTful API** consumed by the [DivineData Android App](https://github.com/valentineRutto/divinedata-app).
+
+It processes user emotion inputs, retrieves relevant verses, and returns AI-generated responses — helping users connect emotion with faith.
+
+---
+
+### 🧩 Key Features
+- `/api/v1/chat` → Accepts user emotion + message, returns AI + verse reflection  
+- `/api/v1/verse` → Fetches scripture by topic or emotion  
+- Modular **Ktor architecture** with clean plugin setup  
+- **JSON serialization**, **DI ready**, and **dotenv** configuration  
+- Secure integration with external APIs
+
+---
+
+### 🏗️ Tech Stack
+- **Ktor (Server Framework)**
+- **Kotlinx Serialization (JSON)**
+- **ESV API Integration**
+- **OpenAI / Gemini (LLM Integration)**
+- **Gradle KTS**
+- **Docker Ready (Optional)**
+
+---
+
+### 🌐 Related Repository
+📱 Native Android App → [DivineData Android (Native)](https://github.com/valentineRutto/divinedata-app)
+
+---
+
+### 💫 Vision
+> “Connecting emotion, scripture, and reflection through intelligent design.”  
+> DivineData bridges the gap between human feeling and divine wisdom — one verse at a time.
+
+
+### Architecture
 ```
 Android App (Native)
 ↓
