@@ -1,6 +1,8 @@
 # divinedata-server
 
 This server serve the divinedata gpt and follow the below architecture:
+
+```
 Android App (Native)
 ↓
 HTTPS
@@ -16,6 +18,7 @@ Ktor Backend Server
 └── /api/v1/verse
 ├─ Fetches: verse by topic or random
 └─ Returns: ESV data
+```
 
 ## Building & Running
 
