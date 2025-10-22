@@ -1,4 +1,4 @@
-# divinedata-server
+# divinedata-server combines ESV API and AI-Intergration  
 
 This server serve the divinedata gpt and follow the below architecture:
 
